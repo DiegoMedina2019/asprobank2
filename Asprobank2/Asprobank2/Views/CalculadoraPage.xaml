@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.CalculadoraPage" Shell.TabBarIsVisible="False"
+             xmlns:vm="clr-namespace:Asprobank2.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <!--<BoxView  Color="#000000"/>-->
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="1" Padding="30,20">
+                        <Picker Title="Origen" TitleColor="Black" HorizontalOptions="CenterAndExpand"
+                            ItemsSource="{Binding Origenes, Mode=TwoWay}"
+                            ItemDisplayBinding="{Binding _nombre}"
+                            SelectedItem="{Binding itemSeleccion, Mode=TwoWay}"
+                            TextColor="Black"
+                            WidthRequest="500"
+                            FontSize="Medium"
+                     />
+                        <Label Text="Fecha de nacimiento" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Start"/>
+                        <DatePicker TextColor="Black" Date="{Binding F_Nacimiento,Mode=TwoWay}" Format="dd/MM/yyyy"/>
+
+                        <Label Text="Fecha de Antiguedad" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Start"/>
+                        <DatePicker TextColor="Black" Date="{Binding F_Antiguedad,Mode=TwoWay}" Format="dd/MM/yyyy"/>
+
+                        <Label Text="Ingrese el Salario base mensual" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Start" />
+                        <Entry PlaceholderColor="Black" 
+                           TextColor="Black"
+                           Text="{Binding Salario_Base_Mensual, Mode=TwoWay}"
+                           Keyboard="Numeric"/>
+
+                        <Label Text="Fecha de Ant. Nivel" TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Start"/>
+                        <DatePicker TextColor="Black" Date="{Binding F_AntiguedadNivel,Mode=TwoWay}" Format="dd/MM/yyyy"/>
+
+                        <Button Text="Calcular" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                            Command="{Binding Btn_Calcular}"
+                            x:Name="btnIniciar"
+                            FontSize="Subtitle"/>
+
+                        <StackLayout Margin="0,15,0,0">
+                            <Label Text="Perdida ocacionada" FontSize="20" FontAttributes="Bold" TextColor="Black"
+                               HorizontalOptions="Center"/>
+                            <Label Text="{Binding Resultado }" FontSize="20" FontAttributes="Bold" TextColor="Black"  
+                               HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+             x:Class="Asprobank2.Views.HomePage" Shell.TabBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="¡Bienvenido!" FontSize="Title" TextColor="Black"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <controls:ImageCarousel x:Name="imgSlider" HeightRequest="600" WidthRequest="400" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

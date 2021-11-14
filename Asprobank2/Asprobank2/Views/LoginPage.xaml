@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Asprobank2.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="false">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <BoxView  Color="#ac0040"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="asprobankLogo.jpg" Grid.Row="0" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+                    <StackLayout Grid.Row="1" Padding="30,20">
+                        <Entry Placeholder="Ingrese su correo" 
+                           PlaceholderColor="White" Text="{Binding EmailTxt, Mode=TwoWay}"
+                           TextColor="White"
+                           Keyboard="Email"/>
+                        <Entry Placeholder="Ingrese su contraseña" 
+                           PlaceholderColor="White" IsPassword="True" Text="{Binding PassTxt, Mode=TwoWay}"
+                           TextColor="White"/>
+                        <Button Text="Iniciar Sesion" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
+                            Command="{Binding LoginCommand}"
+                            x:Name="btnIniciar"
+                            Margin="0,25,0,0"/>
+
+                        <Button Text="Obtener Contraseña" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
+                            Command="{Binding RegistrarseLabel}"
+                            x:Name="btnRegistro"
+                            Margin="0,25,0,0"/>
+
+                        <Button Text="Afiliate" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
+                            Command="{Binding AfiliateLabel}"
+                            x:Name="btnAfiliate"
+                            Margin="0,25,0,0"
+                            />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

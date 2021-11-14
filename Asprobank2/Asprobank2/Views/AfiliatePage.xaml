@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.AfiliatePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <BoxView Color="White" Opacity="0.5"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Orientation="Horizontal" Grid.Row="0"  HorizontalOptions="Center">
+
+                        <Frame IsClippedToBounds="True" CornerRadius="50" HorizontalOptions="Start"
+                               Padding="0" Margin="0,30,0,30"
+                               HasShadow="True">
+                            <Image Source="afiliate.png" WidthRequest="60" HeightRequest="60" />
+                        </Frame>
+
+                        <Label Text="Solicitud de Afiliacion"  FontAttributes="Bold" TextColor="#ac0040" Margin="0,30,0,30"
+                       FontSize="Large" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+
+                    </StackLayout>
+                    
+                    
+
+                    <StackLayout Grid.Row="1" Padding="30,20">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Text="Don/Doña"  FontAttributes="Bold" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center" 
+                                    Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding NombreTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Con NIF"  FontAttributes="Bold" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center" 
+                                     Grid.Row="1" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding NIFTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
+
+                            <Label Text="Nacido el" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="2" Grid.Column="0"/>
+                            <DatePicker TextColor="Black" Date="{Binding F_Nacimiento,Mode=TwoWay}" Format="dd/MM/yyyy"
+                                        Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Vecino de" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="3" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding VecinoTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Provincia de" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="4" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding ProvinciaTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Código Postal" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="5" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding CodPostalTxt, Mode=TwoWay}"
+                                    Keyboard="Numeric" Grid.Row="5" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="C/" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="6" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding CTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Row="6" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="N°" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="7" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding NumTxt, Mode=TwoWay}"
+                                    Keyboard="Text" Grid.Row="7" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Teléfono fijo" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="8" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding TelFijoTxt, Mode=TwoWay}"
+                                    Keyboard="Telephone" Grid.Row="8" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Telefono móvil" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="9" Grid.Column="0"/>
+                            <Entry  PlaceholderColor="Black" Text="{Binding CelularTxt, Mode=TwoWay}"
+                                    Keyboard="Telephone" Grid.Row="9" Grid.Column="1" VerticalOptions="Center" />
+
+                            <Label Text="Mail personal" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="10" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding EmailTxt, Mode=TwoWay}"
+                               Keyboard="Email"  Grid.Row="10" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="FACEBOOK" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="11" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding FacebookTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="11" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="TWITER" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="12" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding TewiterTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="12" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Otras Redes" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="13" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding OtrasRedesTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="13" Grid.Column="1" VerticalOptions="Center"/>
+
+                            
+                            <Entry Placeholder="ACTIVO/PASIVO, de la Empresa" PlaceholderColor="Black" Text="{Binding ActPasivoTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="14" Grid.ColumnSpan="2" VerticalOptions="Center"/>
+
+                            <Label Text="Desde" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="15" Grid.Column="0"/>
+                            <DatePicker TextColor="Black" Date="{Binding F_Desde,Mode=TwoWay}" Format="dd/MM/yyyy"
+                                        Grid.Row="15" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Destino actual" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="16" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding DesActualTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="16" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Telefono" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="17" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding TelefonoTxt, Mode=TwoWay}"
+                               Keyboard="Telephone"  Grid.Row="17" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Localidad de" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="18" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding LocalidadTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="18" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Cat. profesional" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="19" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding CategoriaProfTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="19" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="N° de Empleado" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="20" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding NumEmpleadoTxt, Mode=TwoWay}"
+                               Keyboard="Text"  Grid.Row="20" Grid.Column="1" VerticalOptions="Center"/>
+
+                            <Label Text="Mail profesional" TextColor="Black"
+                                    FontSize="Medium" VerticalOptions="Center"
+                                    Grid.Row="21" Grid.Column="0"/>
+                            <Entry PlaceholderColor="Black" Text="{Binding EmailProfecionalTxt, Mode=TwoWay}"
+                               Keyboard="Email"  Grid.Row="21" Grid.Column="1" VerticalOptions="Center"/>
+
+                        </Grid>
+
+                        <Label Text="*DECLARO, que no estando afiliado a ningún otro sindicato o asociación de carácter sindical, SOLICITO, la afiliación a la Asociación Sindical Profesional de Empleados de la la Banca; comprometiéndome a observar en todos sus extremos los Estatutos, Reglamentos y demás normas por las que se rija en cada momento la Asociación; así como participar y secundar las decisiones de sus Órganos Directivos, sin perjuicio de mis derechos sindicales, además de hacer efectiva la cuota sindical en la cuantía, período y forma (1) que establezca o tenga establecida la Asamblea General o la legislación vigente. Según el RGPD 2016/679, ASOCIACION SINDICAL PROFESIONAL DE LA BANCA CÓRDOBA con C.I.F. G-14044549 cumple con una rigurosa política de privacidad. Le informamos que los datos recogidos en este documento serán incorporados a nuestra base de datos. A través de este consentimiento expreso, le informamos que la finalidad de los datos recabados, sólo serán utilizados para la tramitación de la afiliación correspondiente, cobro de cuota sindical a través de recibo bancario y envío de información relacionada con la asociación. En ningún caso se tratarán sus datos para otros fines que los mencionados, se podrán ceder a terceras partes, exclusivamente para el ejercicio de la defensa de sus intereses como Afiliado de este Sindicato o a la Administración Pública cuando una norma así lo autorice o lo imponga. Que los datos se conservarán durante el tiempo necesario para cumplir con las obligaciones asumidas por las partes y para salvaguardar la prescripción de las acciones que cada parte pueda ejercitar. Cualquier otro uso de los datos necesitara otro consentimiento expreso. En todo momento usted podrá ejercer los derechos de acceso, rectificación, supresión y portabilidad de sus datos, y la limitación u oposición a su tratamiento, a retirar el consentimiento prestado y a reclamar a la AEPD, ante ASOCIACION SINDICAL PROFESIONAL DE LA BANCA CÓRDOBA, Avda. Ronda de los Tejares, 24, Esc.-C, 7º-7, C.P. 14001 Córdoba como responsable de tratamiento."
+                           FontAttributes="Italic" TextColor="Gray" Margin="0,50,0,30"
+                       HorizontalOptions="Center" FontSize="Subtitle"/>
+
+                        <Button Text="Confirmar" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                            Command="{Binding AfiliarCommand}"
+                            IsEnabled="{Binding IsEnabled}"
+                            x:Name="btnAfiliar"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

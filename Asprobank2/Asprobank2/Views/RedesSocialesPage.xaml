@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.RedesSocialesPage"  Shell.TabBarIsVisible="False"
+             Title="Nuestras Redes">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Siguenos en" FontAttributes="Bold" TextColor="Black" Margin="0,50,0,30"
+                       HorizontalOptions="Center" FontSize="Large"/>
+
+
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Frame IsClippedToBounds="True" CornerRadius="50" HorizontalOptions="Center"
+                               Padding="0" Margin="10,10,10,10"
+                               HasShadow="True" WidthRequest="80" HeightRequest="80"
+                       BackgroundColor="#1a73ea" Grid.Column="0" Grid.Row="0">
+
+                    <Image Source="facebook_icon.png" HorizontalOptions="Center"
+                           VerticalOptions="Center" Margin="10"/>
+                </Frame>
+                
+                <Frame IsClippedToBounds="True" CornerRadius="50" HorizontalOptions="Center"
+                               Padding="0" Margin="10,10,10,10"
+                               HasShadow="True" WidthRequest="80" HeightRequest="80"
+                       BackgroundColor="#00a8de" Grid.Column="1" Grid.Row="0">
+
+                    <Image Source="twitter3.png" HorizontalOptions="Center"
+                           VerticalOptions="Center" Margin="10"/>
+                </Frame>
+
+
+                <Label Text="Facebook" TextColor="#ac0040" Grid.Row="1" Grid.Column="0"
+                       FontAttributes="Bold" VerticalOptions="Center" FontSize="Large" HorizontalOptions="Center"
+                       TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FacebookCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label Text="Twitter" TextColor="#ac0040" Grid.Row="1" Grid.Column="1"
+                       FontAttributes="Bold" VerticalOptions="Center" FontSize="Large" HorizontalOptions="Center"
+                       TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TwitterCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

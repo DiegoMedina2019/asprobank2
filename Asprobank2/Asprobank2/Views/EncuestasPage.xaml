@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.EncuestasPage" Shell.TabBarIsVisible="False"
+             xmlns:local="clr-namespace:Asprobank2.ViewModels"  
+             xmlns:model="clr-namespace:Asprobank2.Models">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ActivityIndicator Grid.Row="0" IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="#ac0040" HorizontalOptions="Center"/>
+
+            <CollectionView Grid.Row="1" ItemsSource="{Binding EncuestasList}"
+                        SelectionMode="None"
+                        >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="15,10,15,0" x:DataType="model:Encuesta">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.RowSpan="2" IsClippedToBounds="True" CornerRadius="20"
+                               Padding="0" Margin="0,15,0,15"
+                               HasShadow="True">
+                                <Image Source="encuesta.png" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Frame>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+
+                                <Label FontSize="Medium"
+                                    Text="{Binding nombre}"
+                                   HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
+
+                                <!--<Label Text="{Binding Fecha_}"
+                                   HorizontalTextAlignment="End"
+                                   HorizontalOptions="End"
+                                   FontSize="Micro" 
+                                   TextColor="#AAA"/>-->
+
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+
+                                <StackLayout HorizontalOptions="Start">
+                                    <Label FontSize="15"
+                                    Text="Desde: "
+                                   HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+                                    <Label FontSize="15"
+                                    Text="{Binding Desde}"
+                                   HorizontalOptions="End" VerticalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+
+
+                                <StackLayout HorizontalOptions="End">                                    
+                                    <Label FontSize="15"
+                                        Text="Hasta: "
+                                       HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+                                    <Label FontSize="15"
+                                        Text="{Binding Hasta}"
+                                       HorizontalOptions="End" VerticalOptions="Center" TextColor="Black"/>
+                                </StackLayout>
+                                <!--<Label Text="{Binding Fecha_}"
+                                   HorizontalTextAlignment="End"
+                                   HorizontalOptions="End"
+                                   FontSize="Micro" 
+                                   TextColor="#AAA"/>-->
+
+                            </StackLayout>
+
+                            <BoxView Grid.Row="2" Grid.ColumnSpan="2" 
+                                 BackgroundColor="#ac0040"
+                                 HeightRequest="1"
+                                 Margin="-10,10,-10,0"/>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:EncuestasViewModel}}, Path=EncuestaSeleccionado}"
+                                CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

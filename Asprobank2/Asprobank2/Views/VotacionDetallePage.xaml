@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.VotacionDetallePage" Shell.TabBarIsVisible="true"
+             xmlns:local="clr-namespace:Asprobank2.ViewModels"  
+             xmlns:model="clr-namespace:Asprobank2.Models">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout>
+
+                    <Label FontSize="Title" IsVisible="{Binding IsVotacion}"
+                            Padding="0,15,0,0"
+                            Text="Responde esta Votación"
+                            HorizontalOptions="CenterAndExpand" TextColor="#ac0040"/>
+
+                    <Label FontSize="Subtitle" IsVisible="{Binding NoPregutas}"
+                            Padding="0,15,0,0"
+                            Text="Aun no se cargaron preguntas para sección"
+                            HorizontalOptions="CenterAndExpand" TextColor="#ac0040"/>
+                </StackLayout>
+
+                <CollectionView Grid.Row="1" ItemsSource="{Binding PreguntasList}"
+                                SelectionMode="None"
+                                >
+                    <CollectionView.ItemTemplate >
+                        <DataTemplate>
+
+                            <Grid Padding="15,10,15,0" x:DataType="model:Pregunta_" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Label FontSize="Medium" Grid.Row="0"
+                                            Text="{Binding Pregunta}"
+                                           HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+
+                                <Entry Placeholder="Responda con S/N" Grid.Row="1"
+                                           HorizontalOptions="CenterAndExpand"/>
+
+                            </Grid>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+
+
+                </CollectionView>
+
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Button Text="Enviar" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                                Command="{Binding Btn_EnviarVotacion}"
+                                x:Name="btnEnviarVotacion"
+                                FontSize="Subtitle"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Opacity=".7" BackgroundColor="Black"
+                  IsVisible="{Binding IsLoading}">
+                <ActivityIndicator Grid.Row="0" IsRunning="{Binding IsLoading}"
+                                   Color="#ac0040" HorizontalOptions="Center">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
