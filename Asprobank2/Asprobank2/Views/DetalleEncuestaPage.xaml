@@ -21,6 +21,14 @@
                             Text="Responde esta Encuesta"
                             HorizontalOptions="CenterAndExpand" TextColor="#ac0040"/>
 
+                    <Button Text="Pero antes descarga y lee esto"
+                            TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                                Command="{Binding Btn_descargarDoc}"
+                            IsVisible="{Binding IsEncuesta}"
+                                x:Name="btnDescargarDoc"
+                                FontSize="Subtitle"
+                            Margin="10,10,10,10"/>
+
                     <Label FontSize="Subtitle" IsVisible="{Binding NoPregutas}"
                             Padding="0,15,0,0"
                             Text="Aun no se cargaron preguntas para sección"
@@ -43,8 +51,9 @@
                                             Text="{Binding Pregunta}"
                                            HorizontalOptions="CenterAndExpand" TextColor="Black"/>
 
-                                <Entry Placeholder="Responda con valores del 1 al 10" Grid.Row="1"
-                                           HorizontalOptions="CenterAndExpand" Keyboard="Numeric"/>
+                                <Entry Placeholder="Escriba su respuesta" Grid.Row="1"
+                                       Text="{Binding respuesta_usuario}"
+                                           HorizontalOptions="CenterAndExpand"/>
 
                             </Grid>
                             
@@ -59,8 +68,9 @@
                 <StackLayout Grid.Row="2" HorizontalOptions="Center">
                     <Button Text="Enviar" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
                                 Command="{Binding Btn_EnviarEncuesta}"
+                                IsVisible="{Binding QuitarBTN}"
                                 x:Name="btnEnviarEncuesta"
-                                FontSize="Subtitle"/>
+                                FontSize="Subtitle" Margin="0,10,0,10" WidthRequest="200"/>
                 </StackLayout>
             </Grid>
 

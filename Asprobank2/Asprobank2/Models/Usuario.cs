@@ -90,6 +90,7 @@ namespace Asprobank2.Models
         public string ProvinciaOfiCorrespondencia { get; set; }
         public string password { get; set; }
         public string token { get; set; }
+        public int login_init { get; set; }
     }
 
     public class Notas

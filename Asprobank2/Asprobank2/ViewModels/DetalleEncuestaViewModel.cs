@@ -5,6 +5,9 @@ using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
+using Xamarin.Essentials;
+using Asprobank2.Services;
+
 
 namespace Asprobank2.ViewModels
 {
@@ -17,8 +20,10 @@ namespace Asprobank2.ViewModels
         private ObservableCollection<Pregunta_> preguntasList;
         private Encuesta encu;
         private bool noPregutas;
+        private bool quitarBTN;
 
         public Command Btn_EnviarEncuesta { get; }
+        public Command Btn_descargarDoc { get; }
 
         public DetalleEncuestaViewModel(Encuesta encu)
         {
@@ -26,7 +31,16 @@ namespace Asprobank2.ViewModels
             IsVotacion = encu.tipo == "V";
             IsEncuesta = encu.tipo == "E";
             Btn_EnviarEncuesta = new Command(OnEnviarEncuesta);
+            Btn_descargarDoc = new Command(OnDescargarDoc);
         }
+
+        private async void OnDescargarDoc()
+        {
+            string url = "https://192.168.1.43:433/api/doc_encuestas/" + encu.idencuestacabecera; //local
+            //var url = "https://82.159.210.91:433/api/doc_encuestas/" + encu.idencuestacabecera;;
+            await Launcher.TryOpenAsync(new Uri(url));
+        }
+
         public bool IsLoading
         {
             get { return isLoading; }
@@ -47,9 +61,16 @@ namespace Asprobank2.ViewModels
             get { return noPregutas; }
             set { noPregutas = value; this.OnPropertyChanged(); }
         }
-        private void OnEnviarEncuesta(object obj)
+        public bool QuitarBTN
         {
-            
+            get { return quitarBTN; }
+            set { quitarBTN = value; this.OnPropertyChanged(); }
+        }
+        private async void OnEnviarEncuesta()
+        {
+            var respuestas = new List<Pregunta_>(PreguntasList);
+            string resp = await EncuestasServices.ResponderEncuesta(respuestas,encu.idencuestacabecera);
+            await Application.Current.MainPage.DisplayAlert("Aviso!", resp, "OK");
         }
 
         public ObservableCollection<Pregunta_> PreguntasList
@@ -63,6 +84,7 @@ namespace Asprobank2.ViewModels
             preguntasDelJson = await encu.getPreguntas();
             PreguntasList = new ObservableCollection<Pregunta_>(preguntasDelJson);
             NoPregutas = preguntasDelJson.Count == 0;
+            QuitarBTN = preguntasDelJson.Count == 0?false:true;
             IsLoading = false;
         }
     }

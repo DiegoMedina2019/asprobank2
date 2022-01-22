@@ -43,7 +43,8 @@
                                             Text="{Binding Pregunta}"
                                            HorizontalOptions="CenterAndExpand" TextColor="Black"/>
 
-                                <Entry Placeholder="Responda con S/N" Grid.Row="1"
+                                <Entry Placeholder="Escriba su respuesta" Grid.Row="1"
+                                       Text="{Binding respuesta_usuario}"
                                            HorizontalOptions="CenterAndExpand"/>
 
                             </Grid>
@@ -59,8 +60,9 @@
                 <StackLayout Grid.Row="2" HorizontalOptions="Center">
                     <Button Text="Enviar" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
                                 Command="{Binding Btn_EnviarVotacion}"
+                                IsVisible="{Binding QuitarBTN}"
                                 x:Name="btnEnviarVotacion"
-                                FontSize="Subtitle"/>
+                                FontSize="Subtitle" Margin="0,10,0,10" WidthRequest="200"/>
                 </StackLayout>
             </Grid>
 

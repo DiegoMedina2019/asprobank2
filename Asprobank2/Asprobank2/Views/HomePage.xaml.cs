@@ -17,11 +17,11 @@ namespace Asprobank2.Views
         public HomePage()
         {
             InitializeComponent();
-            imageSources.Add("carrusel1.jpg");
-            imageSources.Add("carrusel2.jpg");
-            imageSources.Add("carrusel3.jpg");
+            //imageSources.Add("carrusel1.jpg");
+            //imageSources.Add("carrusel2.jpg");
+            //imageSources.Add("carrusel3.jpg");
 
-            imgSlider.Images = imageSources;
+            //imgSlider.Images = imageSources;
         }
     }
 }

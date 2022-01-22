@@ -187,4 +187,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\home.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contact_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\balanza_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\circulares100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeScreen675x1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeScreen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\faq100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\config100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tools64px.png" />
+  </ItemGroup>
 </Project>

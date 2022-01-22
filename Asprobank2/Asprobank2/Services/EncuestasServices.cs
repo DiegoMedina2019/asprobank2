@@ -31,7 +31,7 @@ namespace Asprobank2.Services
         {
             var id = Application.Current.Properties["idafiliados"].ToString();
 
-            //string url = "https://192.168.1.38:433/api/encuestas/"+tipo+"/" + id; //local
+            //string url = "https://192.168.1.44:433/api/encuestas/" + tipo+"/" + id; //local
             string url = "https://82.159.210.91:433/api/encuestas/" + tipo + "/" + id; // server
 
             var response = await client.GetAsync(url);
@@ -46,7 +46,7 @@ namespace Asprobank2.Services
         public static async Task<List<Pregunta_>> GetPreguntas(int idencuestacabecera)
         {
             var id = idencuestacabecera.ToString();
-            //string url = "https://192.168.1.38:433/api/encuestas_preguntas/"+id; //local
+            //string url = "https://192.168.1.44:433/api/encuestas_preguntas/" + id; //local
             string url = "https://82.159.210.91:433/api/encuestas_preguntas/"+id; // server
 
             var response = await client.GetAsync(url);
@@ -57,5 +57,40 @@ namespace Asprobank2.Services
             }
             return default;
         }
+
+        //completar es un copy paste
+        public static async Task<string> ResponderEncuesta(List<Pregunta_> respuestas,int idencuestacabecera)
+        {
+            var id = Application.Current.Properties["idafiliados"].ToString();
+            object o = new
+            {
+                respuestas,
+                idafiliado = id,
+                idencuestacabecera
+            };
+            //string url = "https://192.168.1.44:433/api/encuestas/respondida";
+            string url = "https://82.159.210.91:433/api/encuestas/respondida";
+
+            string body = JsonConvert.SerializeObject(o);
+
+            var respuesta = await client.PostAsync(url, new StringContent(body, Encoding.UTF8, "application/json"));
+            string resp;
+            if (respuesta.IsSuccessStatusCode)
+            {
+
+                string json = await respuesta.Content.ReadAsStringAsync();
+                resp = JsonConvert.DeserializeObject<rsp>(json).callMjs;
+            }
+            else
+            {
+                resp = "Hubo un inconveniente al enviar su solicitud, por favor revise su internet";
+            }
+            return resp;
+        }
+
+    }
+    internal class rsp
+    {
+        public string callMjs { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Asprobank2.Services;
 
 namespace Asprobank2.ViewModels
 {
@@ -17,6 +18,7 @@ namespace Asprobank2.ViewModels
         private ObservableCollection<Pregunta_> preguntasList;
         private Encuesta encu;
         private bool noPregutas;
+        private bool quitarBTN;
 
         public Command Btn_EnviarVotacion { get; }
 
@@ -47,9 +49,16 @@ namespace Asprobank2.ViewModels
             get { return noPregutas; }
             set { noPregutas = value; this.OnPropertyChanged(); }
         }
-        private void OnEnviarVotacion(object obj)
+        public bool QuitarBTN
         {
-
+            get { return quitarBTN; }
+            set { quitarBTN = value; this.OnPropertyChanged(); }
+        }
+        private async void OnEnviarVotacion()
+        {
+            var respuestas = new List<Pregunta_>(PreguntasList);
+            string resp = await EncuestasServices.ResponderEncuesta(respuestas, encu.idencuestacabecera);
+            await Application.Current.MainPage.DisplayAlert("Aviso!", resp, "OK");
         }
 
         public ObservableCollection<Pregunta_> PreguntasList
@@ -63,6 +72,7 @@ namespace Asprobank2.ViewModels
             preguntasDelJson = await encu.getPreguntas();
             PreguntasList = new ObservableCollection<Pregunta_>(preguntasDelJson);
             NoPregutas = preguntasDelJson.Count == 0;
+            QuitarBTN = preguntasDelJson.Count == 0 ? false : true;
             IsLoading = false;
         }
     }

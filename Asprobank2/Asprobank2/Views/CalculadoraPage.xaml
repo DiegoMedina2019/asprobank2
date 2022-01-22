@@ -6,9 +6,12 @@
              Title="{Binding Title}">
 
     <ContentPage.Content>
-        <ScrollView>
+        <StackLayout>
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Proximamente!"/>
+        </StackLayout>
+        <!--<ScrollView>
             <Grid>
-                <!--<BoxView  Color="#000000"/>-->
+                --><!--<BoxView  Color="#000000"/>--><!--
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -55,7 +58,7 @@
                     </StackLayout>
                 </Grid>
             </Grid>
-        </ScrollView>
+        </ScrollView>-->
 
     </ContentPage.Content>
 

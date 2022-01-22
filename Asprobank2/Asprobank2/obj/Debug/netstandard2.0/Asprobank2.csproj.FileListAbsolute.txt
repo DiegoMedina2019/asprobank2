@@ -25,3 +25,10 @@ E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\View
 E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.csproj.CoreCompileInputs.cache
 E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\XamlC.stamp
 E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\VotacionDetallePage.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\ShellInvitados.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\Contact.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\TermsCondition.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\CircularesPage.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\ConfiguracionPage.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\FAQPage.xaml.g.cs
+E:\freelance\Coco\Asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\EditarPassPage.xaml.g.cs

@@ -17,7 +17,7 @@
 
 	/* 1: Asprobank2.dll */
 	/* uncompressed_file_size */
-	.word	150016
+	.word	184320
 	/* loaded */
 	.byte	0
 	/* data */
@@ -485,7 +485,7 @@
 
 	/* 53: Xamarin.Essentials.dll */
 	/* uncompressed_file_size */
-	.word	28672
+	.word	30720
 	/* loaded */
 	.byte	0
 	/* data */

@@ -20,7 +20,7 @@ namespace Asprobank2
 
         private void MenuItem_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new LoginPage();
+            Application.Current.MainPage = new ShellInvitados();
         }
 
         //private async void OnMenuItemClicked(object sender, EventArgs e)

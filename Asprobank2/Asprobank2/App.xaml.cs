@@ -12,15 +12,16 @@ namespace Asprobank2
         public App()
         {
             InitializeComponent();
-
-            if (false)
-            {
-                MainPage = new AppShell();
-            }
-            else
-            {
-                MainPage = new LoginPage();
-            }
+            MainPage = new ShellInvitados();
+            //MainPage = new AppShell();
+            //if (false)
+            //{
+            //    MainPage = new AppShell();
+            //}
+            //else
+            //{
+            //    MainPage = new LoginPage();
+            //}
         }
 
         protected override void OnStart()

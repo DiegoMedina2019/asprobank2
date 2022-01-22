@@ -38,7 +38,7 @@ namespace Asprobank2.Services
 
         internal async static Task<bool> SetPassword(string idafiliado, string pass)
         {
-            //string url = "https://192.168.1.38:433/api/afiliado/" + idafiliado; //local
+            //string url = "https://192.168.1.44:433/api/afiliado/" + idafiliado; //local
             string url = "https://82.159.210.91:433/api/afiliado/" +idafiliado; // server
             object a = new
             {
@@ -66,9 +66,43 @@ namespace Asprobank2.Services
             }
         }
 
+
+        //Sobre escribo el metodo para setPass para inicios de usuarios por primera ves, que el server se encargara 
+        //de cambiar el estado de inicio, es decir de 0 (no inicio sesion nunca) a 1 (inicio sesion por primera vez)
+        internal async static Task<bool> SetPassword(string idafiliado, string pass,bool isInit)
+        {
+            //string url = "https://192.168.1.44:433/api/afiliado/" + idafiliado; //local
+            string url = "https://82.159.210.91:433/api/afiliado/" +idafiliado; // server
+            object a = new
+            {
+                password = pass,
+                isInit
+            };
+            string body = JsonConvert.SerializeObject(a);
+            var respuesta = await client.PutAsync(url, new StringContent(body, Encoding.UTF8, "application/json"));
+
+            if (respuesta.IsSuccessStatusCode)
+            {
+                string json = await respuesta.Content.ReadAsStringAsync();
+                if (json.Contains("\"affectedRows\":1"))
+                {
+                    return respuesta.IsSuccessStatusCode;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            else
+            {
+                return respuesta.IsSuccessStatusCode;
+            }
+        }
+
         public async static Task<bool> ValidarAfiliado(string correo, string pass) // para el Loguin
         {
-            //string url = "https://192.168.1.38:433/api/login"; //local
+            //string url = "https://192.168.1.44:433/api/login"; //local
             string url = "https://82.159.210.91:433/api/login"; // server
             Usuario a = new Usuario();
             a.email = correo;
@@ -84,6 +118,7 @@ namespace Asprobank2.Services
                 List<Usuario> afi = JsonConvert.DeserializeObject<List<Usuario>>(json);
 
                 App.Current.Properties["idafiliados"] = (respuesta.IsSuccessStatusCode) ? afi[0].idafiliado : 0;
+                App.Current.Properties["login_init"] = afi[0].login_init;
 
             }
             return respuesta.IsSuccessStatusCode;
@@ -92,7 +127,7 @@ namespace Asprobank2.Services
         }
         internal async static Task<bool> ValidarAfiliado(string emailTxt, string nombreTxt, string v)//sobrecarga para el registro
         {
-            //string url = "https://192.168.1.38:433/api/login"; //local
+            //string url = "https://192.168.1.44:433/api/login"; //local
             string url = "https://82.159.210.91:433/api/login"; // server
             object a = new
             {
@@ -115,6 +150,20 @@ namespace Asprobank2.Services
 
             }
             return respuesta.IsSuccessStatusCode;
+        }
+
+        internal async static Task<Delegado> GetDelegado()
+        {
+            //string url = "https://192.168.1.44:433/api/mi_delegado"; //local
+            string url = "https://82.159.210.91:433/api/mi_delegado"; // server
+
+            var response = await client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<Delegado>(json);
+            }
+            return default;
         }
 
     }

@@ -5,11 +5,11 @@
              Title="Nuestras Redes">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Siguenos en" FontAttributes="Bold" TextColor="Black" Margin="0,50,0,30"
-                       HorizontalOptions="Center" FontSize="Large"/>
+            <Label Text="Proximamente" FontAttributes="Bold" TextColor="Black" Margin="0,50,0,30"
+                       HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
 
 
-            <Grid HorizontalOptions="Center">
+            <!--<Grid HorizontalOptions="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -54,7 +54,7 @@
                         <TapGestureRecognizer Command="{Binding TwitterCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
-            </Grid>
+            </Grid>-->
 
 
         </StackLayout>

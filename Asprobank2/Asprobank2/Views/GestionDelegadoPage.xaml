@@ -2,12 +2,131 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.TabBarIsVisible="False"
+             xmlns:model="clr-namespace:Asprobank2.Models"
              x:Class="Asprobank2.Views.GestionDelegadoPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="¡Aun no tines un delegado asignado!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout>
+                    <Label FontSize="Title" 
+                            Padding="0,15,0,0"
+                            Text="Datos de tu Delegado"
+                            HorizontalOptions="CenterAndExpand" TextColor="#ac0040"/>
+                </StackLayout>
+
+                <Frame Grid.Row="1" CornerRadius="30" HasShadow="True" BorderColor="Black" Margin="10,0,10,0">
+
+                    <Grid Padding="2,2,2,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>                                
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" 
+                                                 Grid.Row="0" Grid.ColumnSpan="2">
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Delegado}"
+                                               HorizontalOptions="Start" VerticalOptions="Center" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                            <BoxView BackgroundColor="#ac0040" HeightRequest="1" WidthRequest="400"/>
+                        </StackLayout>
+
+                        <StackLayout  Grid.Row="2" Grid.Column="0">
+                            <Label FontSize="Subtitle"
+                                                Text="Email:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Email}"
+                                               VerticalOptions="End" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout  Grid.Row="2" Grid.Column="1">
+                            <Label FontSize="Subtitle"
+                                                Text="Oficina:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Oficina}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout  Grid.Row="3" Grid.Column="0">
+                            <Label FontSize="Subtitle"
+                                                Text="Domicilio:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Domicilio}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout  Grid.Row="3" Grid.Column="1">
+                            <Label FontSize="Subtitle"
+                                                Text="Codigo Postal:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding CodigoPostal}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout  Grid.Row="4" Grid.Column="0">
+                            <Label FontSize="Subtitle"
+                                                Text="Poblacion:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Poblacion}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout  Grid.Row="4" Grid.Column="1">
+                            <Label FontSize="Subtitle"
+                                                Text="Provincia:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Provincia}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout  Grid.Row="5" Grid.Column="0">
+                            <Label FontSize="Subtitle"
+                                                Text="Telefono 1:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Telefono1}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+                        <StackLayout  Grid.Row="5" Grid.Column="1">
+                            <Label FontSize="Subtitle"
+                                                Text="Telefono 2:"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                            <Label FontSize="Subtitle"
+                                                Text="{Binding Telefono2}"
+                                               VerticalOptions="Start" TextColor="Black"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+                
+            </Grid>
+
+
+            <Grid Opacity=".7" BackgroundColor="Black"
+                  IsVisible="{Binding IsLoading}">
+                <ActivityIndicator Grid.Row="0" IsRunning="{Binding IsLoading}"
+                                   Color="#ac0040" HorizontalOptions="Center">
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

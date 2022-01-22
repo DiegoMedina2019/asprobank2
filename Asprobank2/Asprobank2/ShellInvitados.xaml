@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Asprobank2.Views"
+             x:Class="Asprobank2.ShellInvitados" BackgroundColor="#ac0040">
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="White"
+              HeightRequest="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Aspect="AspectFit"
+                   Source="logo_asprobank.png" Grid.Row="0"/>
+                <Label TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Subtitle"
+                       Grid.Row="1">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span  Text="Tu equipo sindical"/>
+                            <Span  Text=" en banca" FontAttributes="Bold" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem Title="ASprobank2" 
+                FlyoutDisplayOptions="AsMultipleItems">
+        
+        <ShellContent Title="Inicio"
+                      Icon="home.png"
+                      ContentTemplate="{DataTemplate views:HomePage}">
+        </ShellContent>
+        <!-- <ShellContent Title="Calculadora"
+                      Icon="calculator2.png"
+                      ContentTemplate="{DataTemplate views:CalculadoraPage}">
+        </ShellContent> -->
+        <ShellContent Title="Circulares"
+                      Icon="circulares100px.png" 
+                      ContentTemplate="{DataTemplate views:CircularesPage}">
+        </ShellContent>
+        <ShellContent Title="Afiliate"
+                      Icon="afiliate.png" 
+                      ContentTemplate="{DataTemplate views:AfiliatePage}">
+        </ShellContent>
+        <ShellContent Title="Twitter"
+                      Icon="twitter3.png" 
+                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">
+        </ShellContent>
+        <ShellContent Title="Facebook" Icon="facebook_icon.png"
+                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">            
+        </ShellContent>
+        <ShellContent Title="Terminos y Condiciones"
+                      Icon="balanza_64.png"
+                      ContentTemplate="{DataTemplate views:TermsCondition}">            
+        </ShellContent>
+        <ShellContent Title="Contacto"
+                      Icon="Contact_64.png"
+                      ContentTemplate="{DataTemplate views:Contact}">
+        </ShellContent>
+        <ShellContent Title="Login"
+                      Icon="login_64px.png" 
+                      ContentTemplate="{DataTemplate views:LoginPage}">
+        </ShellContent>
+        
+    </FlyoutItem>
+
+
+    <!--<MenuItem Text="Login"
+              IconImageSource="cerrarSesion.png"
+              Clicked="Login_Clic"
+               />-->
+</Shell>

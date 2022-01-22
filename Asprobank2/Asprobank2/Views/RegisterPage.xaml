@@ -18,7 +18,7 @@
                        HorizontalOptions="Center" FontSize="Large"/>
 
                     <StackLayout Grid.Row="1" Padding="30,20">
-                        <Entry Placeholder="Correo" PlaceholderColor="White" Text="{Binding EmailTxt, Mode=TwoWay}"
+                        <Entry Placeholder="Mi Correo" PlaceholderColor="White" Text="{Binding EmailTxt, Mode=TwoWay}"
                                Keyboard="Email"/>
                         <Entry Placeholder="Nombre" PlaceholderColor="White" 
                            Text="{Binding NombreTxt, Mode=TwoWay}"/>

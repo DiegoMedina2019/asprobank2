@@ -17,12 +17,8 @@ namespace Asprobank2.Views {
     public partial class HomePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamd.ImageCarousel.Forms.Plugin.Abstractions.ImageCarousel imgSlider;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(HomePage));
-            imgSlider = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamd.ImageCarousel.Forms.Plugin.Abstractions.ImageCarousel>(this, "imgSlider");
         }
     }
 }

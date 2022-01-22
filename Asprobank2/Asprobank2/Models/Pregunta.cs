@@ -8,7 +8,7 @@
         public int idencuestadetalle { get; set; }
         public string Pregunta { get; set; }
         public int Resultado { get; set; }
-        public Respuesta respuesta { get; set; }
+        public string respuesta_usuario { get; set; }
 
     }
 

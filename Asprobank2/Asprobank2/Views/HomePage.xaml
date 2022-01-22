@@ -5,14 +5,10 @@
              x:Class="Asprobank2.Views.HomePage" Shell.TabBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <Label Text="¡Bienvenido!" FontSize="Title" TextColor="Black"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-            </StackLayout>
-            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="homeScreen2.jpg" Aspect="AspectFill"/>
+            <!--<StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,0">
                 <controls:ImageCarousel x:Name="imgSlider" HeightRequest="600" WidthRequest="400" />
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

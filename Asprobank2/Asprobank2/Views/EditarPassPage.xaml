@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asprobank2.Views.EditarPassPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <BoxView Color="#000000" Opacity="0.5"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Editar contraseña" Grid.Row="0" FontAttributes="Bold" TextColor="White" Margin="0,50,0,30"
+                       HorizontalOptions="Center" FontSize="Large"/>
+
+                    <StackLayout Grid.Row="1" Padding="30,20">
+                        <Entry Placeholder="Contraseña actual" PlaceholderColor="White" 
+                               Text="{Binding PassActual, Mode=TwoWay}"
+                               Keyboard="Text" IsPassword="True"/>
+                        
+                        <Entry Placeholder="Nueva contraseña" PlaceholderColor="White" 
+                           Text="{Binding NewPass, Mode=TwoWay}" IsPassword="True"/>
+                        
+                        <Entry Placeholder="Repetir contraseña" PlaceholderColor="White" 
+                           Text="{Binding RepitPassActual, Mode=TwoWay}" IsPassword="True"/>
+                        
+                        <Label Text="*Todos los campos son obligatorios, luego de esta accion debera recordar su contraseña. En el caso de que se olvide podra recuperarla en la seccion de Loguin"
+                           FontAttributes="Italic" TextColor="White" Margin="0,50,0,30"
+                       HorizontalOptions="Center" FontSize="Subtitle"/>
+
+                        <Button Text="Generar" TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                            Command="{Binding EditPassCommand}"
+                            IsEnabled="{Binding IsEnabled}"
+                            x:Name="btnRegistrar"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Asprobank2.Views.LoginPage"
-             Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="false">
     <ContentPage.Content>
         <ScrollView>
@@ -34,16 +33,16 @@
                             x:Name="btnIniciar"
                             Margin="0,25,0,0"/>
 
-                        <Button Text="Obtener Contraseña" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
+                        <Button Text="Olvide Mi Contraseña" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
                             Command="{Binding RegistrarseLabel}"
                             x:Name="btnRegistro"
                             Margin="0,25,0,0"/>
 
-                        <Button Text="Afiliate" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
+                        <!--<Button Text="Afiliate" TextColor="White" BackgroundColor="Black"  CornerRadius="25"
                             Command="{Binding AfiliateLabel}"
                             x:Name="btnAfiliate"
                             Margin="0,25,0,0"
-                            />
+                            />-->
                     </StackLayout>
                 </Grid>
             </Grid>
