@@ -24,7 +24,7 @@
                     <Button Text="Pero antes descarga y lee esto"
                             TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
                                 Command="{Binding Btn_descargarDoc}"
-                            IsVisible="{Binding IsEncuesta}"
+                            IsVisible="{Binding QuitarBTN}"
                                 x:Name="btnDescargarDoc"
                                 FontSize="Subtitle"
                             Margin="10,10,10,10"/>
@@ -51,9 +51,44 @@
                                             Text="{Binding Pregunta}"
                                            HorizontalOptions="CenterAndExpand" TextColor="Black"/>
 
-                                <Entry Placeholder="Escriba su respuesta" Grid.Row="1"
-                                       Text="{Binding respuesta_usuario}"
-                                           HorizontalOptions="CenterAndExpand"/>
+                                <FlexLayout Direction="Column" HorizontalOptions="Center" Grid.Row="1">
+                                    
+                                    <Picker x:Name="picker_respuestaSN"
+                                            Title="Pulsa aqui para seleccionar una respuesta"
+                                            TitleColor="Red"
+                                            IsVisible="{Binding isSN}"
+                                            SelectedItem="{Binding respuesta_usuario}" >
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>SI</x:String>
+                                                <x:String>NO</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                    <Picker x:Name="picker_respuesta_num"
+                                            Title="Pulsa aqui para seleccionar una respuesta"
+                                            TitleColor="Red"
+                                            IsVisible="{Binding isValor}"
+                                            SelectedItem="{Binding respuesta_usuario}">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>1</x:String>
+                                                <x:String>2</x:String>
+                                                <x:String>2</x:String>
+                                                <x:String>3</x:String>
+                                                <x:String>4</x:String>
+                                                <x:String>5</x:String>
+                                                <x:String>6</x:String>
+                                                <x:String>7</x:String>
+                                                <x:String>8</x:String>
+                                                <x:String>9</x:String>
+                                                <x:String>10</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                </FlexLayout>
 
                             </Grid>
                             

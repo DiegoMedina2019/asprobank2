@@ -2008,26 +2008,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diego\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2.Android\\Asprobank2.Android.csproj",
+      "projectUniqueName": "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2.Android\\Asprobank2.Android.csproj",
       "projectName": "Asprobank2.Android",
-      "projectPath": "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2.Android\\Asprobank2.Android.csproj",
-      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2.Android\\obj\\",
+      "projectPath": "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2.Android\\Asprobank2.Android.csproj",
+      "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+      "outputPath": "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
@@ -2039,8 +2034,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2\\Asprobank2.csproj": {
-              "projectPath": "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2\\Asprobank2.csproj"
+            "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2\\Asprobank2.csproj": {
+              "projectPath": "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2\\Asprobank2.csproj"
             }
           }
         }

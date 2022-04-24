@@ -25,6 +25,7 @@
                     <Grid Padding="2,2,2,2">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>                                
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -47,24 +48,29 @@
                             <BoxView BackgroundColor="#ac0040" HeightRequest="1" WidthRequest="400"/>
                         </StackLayout>
 
-                        <StackLayout  Grid.Row="2" Grid.Column="0">
+                        <FlexLayout Grid.Row="2" Grid.ColumnSpan="2" Direction="Row" HeightRequest="25" Margin="0,0,0,0">
                             <Label FontSize="Subtitle"
                                                 Text="Email:"
                                                VerticalOptions="Start" TextColor="Black"/>
                             <Label FontSize="Subtitle"
+                                                Margin="3,0,0,0"
                                                 Text="{Binding Email}"
                                                VerticalOptions="End" TextColor="Black"/>
-                        </StackLayout>
-                        <StackLayout  Grid.Row="2" Grid.Column="1">
+                        </FlexLayout>
+
+                        <StackLayout  Grid.Row="3" Grid.Column="0">
                             <Label FontSize="Subtitle"
                                                 Text="Oficina:"
                                                VerticalOptions="Start" TextColor="Black"/>
+                            
+                        </StackLayout>
+                        <StackLayout  Grid.Row="3" Grid.Column="1">
                             <Label FontSize="Subtitle"
                                                 Text="{Binding Oficina}"
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
 
-                        <StackLayout  Grid.Row="3" Grid.Column="0">
+                        <StackLayout  Grid.Row="4" Grid.Column="0">
                             <Label FontSize="Subtitle"
                                                 Text="Domicilio:"
                                                VerticalOptions="Start" TextColor="Black"/>
@@ -72,7 +78,7 @@
                                                 Text="{Binding Domicilio}"
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
-                        <StackLayout  Grid.Row="3" Grid.Column="1">
+                        <StackLayout  Grid.Row="4" Grid.Column="1">
                             <Label FontSize="Subtitle"
                                                 Text="Codigo Postal:"
                                                VerticalOptions="Start" TextColor="Black"/>
@@ -81,7 +87,7 @@
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
 
-                        <StackLayout  Grid.Row="4" Grid.Column="0">
+                        <StackLayout  Grid.Row="5" Grid.Column="0">
                             <Label FontSize="Subtitle"
                                                 Text="Poblacion:"
                                                VerticalOptions="Start" TextColor="Black"/>
@@ -89,7 +95,7 @@
                                                 Text="{Binding Poblacion}"
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
-                        <StackLayout  Grid.Row="4" Grid.Column="1">
+                        <StackLayout  Grid.Row="5" Grid.Column="1">
                             <Label FontSize="Subtitle"
                                                 Text="Provincia:"
                                                VerticalOptions="Start" TextColor="Black"/>
@@ -98,7 +104,7 @@
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
 
-                        <StackLayout  Grid.Row="5" Grid.Column="0">
+                        <StackLayout  Grid.Row="6" Grid.Column="0">
                             <Label FontSize="Subtitle"
                                                 Text="Telefono 1:"
                                                VerticalOptions="Start" TextColor="Black"/>
@@ -106,7 +112,7 @@
                                                 Text="{Binding Telefono1}"
                                                VerticalOptions="Start" TextColor="Black"/>
                         </StackLayout>
-                        <StackLayout  Grid.Row="5" Grid.Column="1">
+                        <StackLayout  Grid.Row="6" Grid.Column="1">
                             <Label FontSize="Subtitle"
                                                 Text="Telefono 2:"
                                                VerticalOptions="Start" TextColor="Black"/>

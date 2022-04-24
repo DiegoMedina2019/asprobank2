@@ -2,12 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Asprobank2.Views.FAQPage"
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             xmlns:local="clr-namespace:Asprobank2.ViewModels"  
+             xmlns:model="clr-namespace:Asprobank2.Models">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="FAQ proximamente"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ActivityIndicator Grid.Row="0" IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="#ac0040" HorizontalOptions="Center"/>
+
+            <CollectionView Grid.Row="1" ItemsSource="{Binding FamiliasList}"
+                        SelectionMode="None"
+                        >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="15,10,15,0" x:DataType="model:FaqFamilia">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame  IsClippedToBounds="True" CornerRadius="20"
+                               Padding="0" Margin="0,15,0,15"
+                               HasShadow="True">
+                                <Image Source="faq100px.png" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Frame>
+
+                            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+
+                                <Label FontSize="Large"
+                                    Text="{Binding nombre_familia}"
+                                   HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black"/>
+
+                            </StackLayout>
+
+                            <BoxView Grid.Row="1" Grid.ColumnSpan="2" 
+                                 BackgroundColor="#ac0040"
+                                 HeightRequest="1"
+                                 Margin="-10,10,-10,0"/>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:FAQViewModel}}, Path=FamiliaSeleccionada}"
+                                CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

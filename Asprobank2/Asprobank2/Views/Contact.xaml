@@ -14,11 +14,11 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
-                    <Label Text="Ponte en contacto con nosotros" Grid.Row="0" FontAttributes="Bold" TextColor="White" Margin="0,50,0,30"
+                    <Label Text="Contacta con nosotros" Grid.Row="0" FontAttributes="Bold" TextColor="White" Margin="0,50,0,30"
                        HorizontalOptions="Center" FontSize="Large"/>
 
                     <StackLayout Grid.Row="1" Padding="30,20">
-                        <Entry Placeholder="Correo" PlaceholderColor="White"
+                        <Entry Placeholder="Pon tu correo" PlaceholderColor="White"
                                Keyboard="Email"/>
                         <Entry Placeholder="Comentario" PlaceholderColor="White" />
                         

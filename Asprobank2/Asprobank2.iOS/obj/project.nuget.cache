@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vpnmjscIrsu9j2ukf1rcuIsatTi/TiB1bxBmI6VqiBx8t8U3tJxhdkYBjbeiPydURu71R+vGzs6b1OGh/WipWQ==",
+  "dgSpecHash": "CjdQOM1/n13mll70lEntiRCR1TOeUMngt1YACLs9XYn6vrsU40brkmPYyE+C2nQvW8pQDH1hRz/ypZqz8hvUcQ==",
   "success": true,
-  "projectFilePath": "E:\\freelance\\Coco\\Asprobank2\\Asprobank2\\Asprobank2.iOS\\Asprobank2.iOS.csproj",
+  "projectFilePath": "J:\\Trabajos\\freelancer\\COCO\\asprobank2\\Asprobank2\\Asprobank2.iOS\\Asprobank2.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\diego\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512",
-    "C:\\Users\\diego\\.nuget\\packages\\xamd.plugins.forms.imagecarousel\\1.0.2\\xamd.plugins.forms.imagecarousel.1.0.2.nupkg.sha512"
+    "C:\\Users\\Diego\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Diego\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Diego\\.nuget\\packages\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512",
+    "C:\\Users\\Diego\\.nuget\\packages\\xamd.plugins.forms.imagecarousel\\1.0.2\\xamd.plugins.forms.imagecarousel.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }

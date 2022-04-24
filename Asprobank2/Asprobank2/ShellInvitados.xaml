@@ -35,6 +35,14 @@
                       Icon="home.png"
                       ContentTemplate="{DataTemplate views:HomePage}">
         </ShellContent>
+        <ShellContent Title="Login"
+                      Icon="login_64px.png" 
+                      ContentTemplate="{DataTemplate views:LoginPage}">
+        </ShellContent>
+        <ShellContent Title="Afiliate"
+                      Icon="afiliate.png" 
+                      ContentTemplate="{DataTemplate views:AfiliatePage}">
+        </ShellContent>
         <!-- <ShellContent Title="Calculadora"
                       Icon="calculator2.png"
                       ContentTemplate="{DataTemplate views:CalculadoraPage}">
@@ -43,10 +51,10 @@
                       Icon="circulares100px.png" 
                       ContentTemplate="{DataTemplate views:CircularesPage}">
         </ShellContent>
-        <ShellContent Title="Afiliate"
-                      Icon="afiliate.png" 
-                      ContentTemplate="{DataTemplate views:AfiliatePage}">
-        </ShellContent>
+        <ShellContent Title="Contacto"
+                      Icon="Contact_64.png"
+                      ContentTemplate="{DataTemplate views:Contact}">
+        </ShellContent>        
         <ShellContent Title="Twitter"
                       Icon="twitter3.png" 
                       ContentTemplate="{DataTemplate views:RedesSocialesPage}">
@@ -58,15 +66,8 @@
                       Icon="balanza_64.png"
                       ContentTemplate="{DataTemplate views:TermsCondition}">            
         </ShellContent>
-        <ShellContent Title="Contacto"
-                      Icon="Contact_64.png"
-                      ContentTemplate="{DataTemplate views:Contact}">
-        </ShellContent>
-        <ShellContent Title="Login"
-                      Icon="login_64px.png" 
-                      ContentTemplate="{DataTemplate views:LoginPage}">
-        </ShellContent>
         
+
     </FlyoutItem>
 
 

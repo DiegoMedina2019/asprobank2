@@ -39,10 +39,6 @@
                       Icon="home.png"
                       ContentTemplate="{DataTemplate views:HomePage}">
         </ShellContent>
-        <ShellContent Title="Calculadora"
-                      Icon="calculator2.png"
-                      ContentTemplate="{DataTemplate views:CalculadoraPage}">
-        </ShellContent>
         <ShellContent Title="Circulares"
                       Icon="circulares100px.png" 
                       ContentTemplate="{DataTemplate views:CircularesPage}">
@@ -55,24 +51,17 @@
                       Icon="encuesta.png" 
                       ContentTemplate="{DataTemplate views:EncuestasPage}">
         </ShellContent>
-        <ShellContent Title="Mi delegado"
-                      Icon="gestionDelegados.png" 
-                      ContentTemplate="{DataTemplate views:GestionDelegadoPage}">
-        </ShellContent>
         <ShellContent Title="Votaciones"
                       Icon="votacion.png" 
                       ContentTemplate="{DataTemplate views:VotacionesPage}">
         </ShellContent>
-        <ShellContent Title="Twitter"
-                      Icon="twitter3.png" 
-                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">
+        <ShellContent Title="Calculadora"
+                      Icon="calculator2.png"
+                      ContentTemplate="{DataTemplate views:CalculadoraPage}">
         </ShellContent>
-        <ShellContent Title="Facebook" Icon="facebook_icon.png"
-                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">
-        </ShellContent>
-        <ShellContent Title="Terminos y Condiciones"
-                      Icon="balanza_64.png"
-                      ContentTemplate="{DataTemplate views:TermsCondition}">
+        <ShellContent Title="Mi delegado"
+                      Icon="gestionDelegados.png" 
+                      ContentTemplate="{DataTemplate views:GestionDelegadoPage}">
         </ShellContent>
         <ShellContent Title="FAQ"
                       Icon="faq100px.png"
@@ -81,11 +70,24 @@
         <ShellContent Title="Contacto"
                       Icon="Contact_64.png"
                       ContentTemplate="{DataTemplate views:Contact}">
+        </ShellContent>        
+        <ShellContent Title="Twitter"
+                      Icon="twitter3.png" 
+                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">
+        </ShellContent>
+        <ShellContent Title="Facebook" Icon="facebook_icon.png"
+                      ContentTemplate="{DataTemplate views:RedesSocialesPage}">
         </ShellContent>
         <ShellContent Title="Configuración"
                       Icon="config100.png"
                       ContentTemplate="{DataTemplate views:ConfiguracionPage}">
         </ShellContent>
+        <ShellContent Title="Terminos y Condiciones"
+                      Icon="balanza_64.png"
+                      ContentTemplate="{DataTemplate views:TermsCondition}">
+        </ShellContent>        
+        
+        
     </FlyoutItem>
 
     <MenuItem Text="Cerrar Sesion"

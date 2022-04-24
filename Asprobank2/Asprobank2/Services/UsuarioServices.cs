@@ -38,8 +38,7 @@ namespace Asprobank2.Services
 
         internal async static Task<bool> SetPassword(string idafiliado, string pass)
         {
-            //string url = "https://192.168.1.44:433/api/afiliado/" + idafiliado; //local
-            string url = "https://82.159.210.91:433/api/afiliado/" +idafiliado; // server
+            string url = App.api + "afiliado/" + idafiliado;
             object a = new
             {
                 password = pass
@@ -71,8 +70,7 @@ namespace Asprobank2.Services
         //de cambiar el estado de inicio, es decir de 0 (no inicio sesion nunca) a 1 (inicio sesion por primera vez)
         internal async static Task<bool> SetPassword(string idafiliado, string pass,bool isInit)
         {
-            //string url = "https://192.168.1.44:433/api/afiliado/" + idafiliado; //local
-            string url = "https://82.159.210.91:433/api/afiliado/" +idafiliado; // server
+            string url = App.api + "afiliado/" + idafiliado;
             object a = new
             {
                 password = pass,
@@ -102,8 +100,7 @@ namespace Asprobank2.Services
 
         public async static Task<bool> ValidarAfiliado(string correo, string pass) // para el Loguin
         {
-            //string url = "https://192.168.1.44:433/api/login"; //local
-            string url = "https://82.159.210.91:433/api/login"; // server
+            string url = App.api + "login";
             Usuario a = new Usuario();
             a.email = correo;
             a.password = pass;
@@ -127,8 +124,7 @@ namespace Asprobank2.Services
         }
         internal async static Task<bool> ValidarAfiliado(string emailTxt, string nombreTxt, string v)//sobrecarga para el registro
         {
-            //string url = "https://192.168.1.44:433/api/login"; //local
-            string url = "https://82.159.210.91:433/api/login"; // server
+            string url = App.api + "login";
             object a = new
             {
                 email = emailTxt,
@@ -154,8 +150,7 @@ namespace Asprobank2.Services
 
         internal async static Task<Delegado> GetDelegado()
         {
-            //string url = "https://192.168.1.44:433/api/mi_delegado"; //local
-            string url = "https://82.159.210.91:433/api/mi_delegado"; // server
+            string url = App.api + "mi_delegado";
 
             var response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)

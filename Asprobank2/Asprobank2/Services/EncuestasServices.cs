@@ -31,8 +31,7 @@ namespace Asprobank2.Services
         {
             var id = Application.Current.Properties["idafiliados"].ToString();
 
-            //string url = "https://192.168.1.44:433/api/encuestas/" + tipo+"/" + id; //local
-            string url = "https://82.159.210.91:433/api/encuestas/" + tipo + "/" + id; // server
+            string url =  App.api + "encuestas/" + tipo+"/" + id;
 
             var response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)
@@ -46,8 +45,7 @@ namespace Asprobank2.Services
         public static async Task<List<Pregunta_>> GetPreguntas(int idencuestacabecera)
         {
             var id = idencuestacabecera.ToString();
-            //string url = "https://192.168.1.44:433/api/encuestas_preguntas/" + id; //local
-            string url = "https://82.159.210.91:433/api/encuestas_preguntas/"+id; // server
+            string url = App.api + "encuestas_preguntas/" + id;
 
             var response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)
@@ -68,8 +66,7 @@ namespace Asprobank2.Services
                 idafiliado = id,
                 idencuestacabecera
             };
-            //string url = "https://192.168.1.44:433/api/encuestas/respondida";
-            string url = "https://82.159.210.91:433/api/encuestas/respondida";
+            string url = App.api + "encuestas/respondida";
 
             string body = JsonConvert.SerializeObject(o);
 

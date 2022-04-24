@@ -16,7 +16,7 @@ namespace Asprobank2.Models
         public DateTime HastaFecha;
         public int idencuestas_afiliados { get; set; }
         public List<Pregunta_> preguntas { get; set; }
-
+        public string FicheroPdf { get; set; }
 
         public string Desde
         {

@@ -5,9 +5,18 @@
              Shell.TabBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Proximamente!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Para descargar las circulares haz clic en ir"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button Text="IR..."
+                            TextColor="White" BackgroundColor="#ac0040"  CornerRadius="25"
+                                Command="{Binding Btn_descargaCirculares}"
+                                x:Name="btnDescargarDoc"
+                                FontSize="Subtitle"
+                            Margin="10,10,10,10"
+                            VerticalOptions="Center" 
+                            HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

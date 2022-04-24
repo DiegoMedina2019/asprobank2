@@ -30,15 +30,25 @@ namespace Asprobank2.ViewModels
             this.encu = encu;
             IsVotacion = encu.tipo == "V";
             IsEncuesta = encu.tipo == "E";
+            QuitarBTN = encu.FicheroPdf != "";
             Btn_EnviarEncuesta = new Command(OnEnviarEncuesta);
             Btn_descargarDoc = new Command(OnDescargarDoc);
         }
 
         private async void OnDescargarDoc()
         {
-            string url = "https://192.168.1.43:433/api/doc_encuestas/" + encu.idencuestacabecera; //local
-            //var url = "https://82.159.210.91:433/api/doc_encuestas/" + encu.idencuestacabecera;;
-            await Launcher.TryOpenAsync(new Uri(url));
+            string url = App.api + "doc_encuestas/" + encu.idencuestacabecera;
+            //await Launcher.TryOpenAsync(new Uri(url));
+
+            try
+            {
+                await Browser.OpenAsync(url, BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+                // An unexpected error occured. No browser may be installed on the device.
+                await Application.Current.MainPage.DisplayAlert("Aviso!", "Hubo un inconveniente al intentar abrir su navegador", "ok");
+            }
         }
 
         public bool IsLoading
@@ -83,8 +93,12 @@ namespace Asprobank2.ViewModels
             IsLoading = true;
             preguntasDelJson = await encu.getPreguntas();
             PreguntasList = new ObservableCollection<Pregunta_>(preguntasDelJson);
+            
+            foreach (Pregunta_ pregunta in preguntasList) 
+            {
+                pregunta.setTipo();//para poder evaluar un condicional de visibilidad en la vista xaml 
+            }
             NoPregutas = preguntasDelJson.Count == 0;
-            QuitarBTN = preguntasDelJson.Count == 0?false:true;
             IsLoading = false;
         }
     }

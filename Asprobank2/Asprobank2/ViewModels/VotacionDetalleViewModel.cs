@@ -71,6 +71,10 @@ namespace Asprobank2.ViewModels
             IsLoading = true;
             preguntasDelJson = await encu.getPreguntas();
             PreguntasList = new ObservableCollection<Pregunta_>(preguntasDelJson);
+            foreach (Pregunta_ pregunta in preguntasList)
+            {
+                pregunta.setTipo();//para poder evaluar un condicional de visibilidad en la vista xaml 
+            }
             NoPregutas = preguntasDelJson.Count == 0;
             QuitarBTN = preguntasDelJson.Count == 0 ? false : true;
             IsLoading = false;

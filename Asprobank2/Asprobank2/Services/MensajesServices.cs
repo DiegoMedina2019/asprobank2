@@ -40,8 +40,7 @@ namespace Asprobank2.Services
         {
             var id = Application.Current.Properties["idafiliados"].ToString();
 
-            //string url = "https://192.168.1.44:433/api/mensajes/" + id; //local
-            string url = "https://82.159.210.91:433/api/mensajes/" +id; // server
+            string url = App.api + "mensajes/" + id;
 
             var response = await client.GetAsync(url);// apesar q ssl es con localhost desde la virtual vede ser una ip
             if (response.IsSuccessStatusCode)
@@ -56,8 +55,7 @@ namespace Asprobank2.Services
         public async static Task UpdateMensajes(int id, object mjs)
         {
 
-            //string url = "https://192.168.1.44:433/api/mensajes/" + id.ToString();
-            string url = "https://82.159.210.91:433/api/mensajes/" + id.ToString();
+            string url = App.api + "mensajes/" + id.ToString();
             string body = JsonConvert.SerializeObject(mjs);
 
             var response = await client.PutAsync(url, new StringContent(body, Encoding.UTF8, "application/json"));// apesar q ssl es con localhost desde la virtual vede ser una ip

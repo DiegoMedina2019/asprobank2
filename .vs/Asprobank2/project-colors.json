@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cdc32ef1-d919-497c-81e3-716a521518a0": {
+      "ProjectGuid": "cdc32ef1-d919-497c-81e3-716a521518a0",
+      "DisplayName": "Asprobank2",
+      "ColorIndex": 0
+    },
+    "9c3e8643-990b-47ac-880d-78447a99ca96": {
+      "ProjectGuid": "9c3e8643-990b-47ac-880d-78447a99ca96",
+      "DisplayName": "Asprobank2.Android",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
