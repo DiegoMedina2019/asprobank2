@@ -37,7 +37,7 @@
 
 	/* 1: Asprobank2.dll */
 	/* uncompressed_file_size */
-	.long	210432
+	.long	212480
 	/* loaded */
 	.byte	0
 	/* data */

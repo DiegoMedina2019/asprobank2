@@ -24,5 +24,10 @@ namespace Asprobank2.Views
             base.OnAppearing();
             await vm.LoadFamilias();
         }
+
+        private void buscadorFamilias_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.OnBusqueda(e.NewTextValue);
+        }
     }
 }

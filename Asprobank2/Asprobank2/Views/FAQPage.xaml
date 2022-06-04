@@ -10,6 +10,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <ActivityIndicator Grid.Row="0" IsRunning="{Binding IsLoading}"
@@ -17,8 +18,23 @@
                                IsVisible="{Binding IsLoading}"
                                Color="#ac0040" HorizontalOptions="Center"/>
 
-            <CollectionView Grid.Row="1" ItemsSource="{Binding FamiliasList}"
+            <SearchBar Grid.Row="1"
+                        Placeholder="Buscar pregunta..."
+                       CancelButtonColor="#ac0040"
+                       PlaceholderColor="Gray"
+                       TextColor="#ac0040"
+                        Keyboard="Chat"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       FontAttributes="Italic" 
+                       x:Name="buscadorFamilias"
+                       TextChanged="buscadorFamilias_TextChanged"
+                       />
+            
+
+            <CollectionView Grid.Row="2" ItemsSource="{Binding FamiliasList}"
                         SelectionMode="None"
+                            x:Name="listaFamiliasView"
                         >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

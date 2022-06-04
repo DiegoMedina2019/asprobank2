@@ -91,42 +91,42 @@
 	.section	.rodata.map_aname.15,"aMS",@progbits,1
 	.type	.L.map_aname.15, @object
 .L.map_aname.15:
-	.asciz	"Xamarin.Android.Support.SwipeRefreshLayout"
-	.size	.L.map_aname.15, 43
+	.asciz	"Asprobank2.Android"
+	.size	.L.map_aname.15, 19
 
 	.section	.rodata.map_aname.16,"aMS",@progbits,1
 	.type	.L.map_aname.16, @object
 .L.map_aname.16:
-	.asciz	"Xamarin.Android.Support.Fragment"
-	.size	.L.map_aname.16, 33
+	.asciz	"Xamarin.Android.Support.SwipeRefreshLayout"
+	.size	.L.map_aname.16, 43
 
 	.section	.rodata.map_aname.17,"aMS",@progbits,1
 	.type	.L.map_aname.17, @object
 .L.map_aname.17:
-	.asciz	"Xamarin.Android.Support.DrawerLayout"
-	.size	.L.map_aname.17, 37
+	.asciz	"Xamarin.Android.Support.Fragment"
+	.size	.L.map_aname.17, 33
 
 	.section	.rodata.map_aname.18,"aMS",@progbits,1
 	.type	.L.map_aname.18, @object
 .L.map_aname.18:
-	.asciz	"Xamd.ImageCarousel.Forms.Plugin.Droid"
-	.size	.L.map_aname.18, 38
+	.asciz	"Xamarin.Android.Support.DrawerLayout"
+	.size	.L.map_aname.18, 37
 
 	.section	.rodata.map_aname.19,"aMS",@progbits,1
 	.type	.L.map_aname.19, @object
 .L.map_aname.19:
-	.asciz	"Xamarin.Android.Arch.Lifecycle.Common"
+	.asciz	"Xamd.ImageCarousel.Forms.Plugin.Droid"
 	.size	.L.map_aname.19, 38
 
 	.section	.rodata.map_aname.20,"aMS",@progbits,1
 	.type	.L.map_aname.20, @object
 .L.map_aname.20:
-	.asciz	"Xamarin.Android.Support.Design"
-	.size	.L.map_aname.20, 31
+	.asciz	"Xamarin.Android.Arch.Lifecycle.Common"
+	.size	.L.map_aname.20, 38
 
 	.section	.rodata.map_aname.21,"aMS",@progbits,1
 	.type	.L.map_aname.21, @object
 .L.map_aname.21:
-	.asciz	"Asprobank2.Android"
-	.size	.L.map_aname.21, 19
+	.asciz	"Xamarin.Android.Support.Design"
+	.size	.L.map_aname.21, 31
 

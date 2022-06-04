@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace Asprobank2.ViewModels
 {
@@ -24,6 +25,24 @@ namespace Asprobank2.ViewModels
             FamiliaSeleccionada = new Command<FaqFamilia>(OnClickMjs);
         }
 
+        public void OnBusqueda(string palabra)
+        {
+            if (string.IsNullOrWhiteSpace(palabra))
+            {
+                FamiliasList = new ObservableCollection<FaqFamilia>(familiasDelJson);
+                //await Application.Current.MainPage.DisplayAlert("entre al IF!", "Las palabnra ingresada es: " + palabra, "ok");
+            }
+            else
+            {
+               var faqFamilias = familiasDelJson.Where(
+                                        f => f.nombre_familia.ToLower().Contains(palabra.ToLower())
+                                    ).ToList();
+                //await Application.Current.MainPage.DisplayAlert("Disculpe!", "Las palabnra ingresada es: "+palabra+" se encontraron:"+ faqFamilias.Count(), "ok");
+              FamiliasList = new ObservableCollection<FaqFamilia>(faqFamilias);
+                
+            }
+        }
+
         #region Propiedades
         public bool IsLoading
         {
@@ -35,6 +54,7 @@ namespace Asprobank2.ViewModels
             get { return familiasList; }
             set { familiasList = value; this.OnPropertyChanged(); }
         }
+
         #endregion
 
         #region Metodos

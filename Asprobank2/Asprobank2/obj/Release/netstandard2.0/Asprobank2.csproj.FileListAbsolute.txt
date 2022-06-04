@@ -35,7 +35,6 @@ J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Release\netstan
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Release\netstandard2.0\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Release\netstandard2.0\ref\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Release\netstandard2.0\Asprobank2.pdb
-J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Release\netstandard2.0\Asprobank2.csproj.AssemblyReference.cache
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Release\netstandard2.0\Asprobank2.GeneratedMSBuildEditorConfig.editorconfig
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Release\netstandard2.0\App.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Release\netstandard2.0\AppShell.xaml.g.cs
