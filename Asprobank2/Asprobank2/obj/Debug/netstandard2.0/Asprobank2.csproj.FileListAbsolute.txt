@@ -36,7 +36,6 @@ J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Debug\netstanda
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Debug\netstandard2.0\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Debug\netstandard2.0\ref\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\bin\Debug\netstandard2.0\Asprobank2.pdb
-J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.csproj.AssemblyReference.cache
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.GeneratedMSBuildEditorConfig.editorconfig
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\App.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
@@ -47,6 +46,7 @@ J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstanda
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\ConfiguracionPage.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\Contact.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\DetalleEncuestaPage.xaml.g.cs
+J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\DetalleFAQPreguntasPage.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\DetalleMensajePage.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\EditarPassPage.xaml.g.cs
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\EncuestasPage.xaml.g.cs
@@ -67,4 +67,4 @@ J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstanda
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\ref\Asprobank2.dll
 J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.pdb
-J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Views\DetalleFAQPreguntasPage.xaml.g.cs
+J:\Trabajos\freelancer\COCO\asprobank2\Asprobank2\Asprobank2\obj\Debug\netstandard2.0\Asprobank2.csproj.AssemblyReference.cache

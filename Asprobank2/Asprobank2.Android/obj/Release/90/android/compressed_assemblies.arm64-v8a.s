@@ -17,7 +17,7 @@
 
 	/* 1: Asprobank2.dll */
 	/* uncompressed_file_size */
-	.word	212480
+	.word	237568
 	/* loaded */
 	.byte	0
 	/* data */
